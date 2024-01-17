@@ -6,7 +6,9 @@
 parameters:
 
 services:
-    # default configuration for services in *this* file
+    App\Service\ChatGPT:
+        arguments:
+            $apiKey: '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'
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
