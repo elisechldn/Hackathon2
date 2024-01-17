@@ -48,6 +48,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?int $postal_code = null;
 
+    #[ORM\Column(length: 10)]
+    private ?string $genre = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -186,6 +189,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setPostalCode(int $postal_code): static
     {
         $this->postal_code = $postal_code;
+
+        return $this;
+    }
+
+    public function getGenre(): ?string
+    {
+        return $this->genre;
+    }
+
+    public function setGenre(string $genre): static
+    {
+        $this->genre = $genre;
 
         return $this;
     }
