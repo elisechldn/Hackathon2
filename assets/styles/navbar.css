@@ -17,7 +17,7 @@ nav div {
     justify-content: center;
 }
 
-nav div h1 {
+nav div h3 {
     color: white;
     font-family: var(--titleF);
     text-align: center;
