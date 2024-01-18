@@ -13,12 +13,12 @@ class HomeController extends AbstractController
     public function index(WeatherApi $weatherApi): Response
     {
 
-        $latitude = 42.3478;
-        $longitude = -71.0466;
+        $latitude = 43.42519;
+        $longitude = 6.768337;
 
         $weatherData = $weatherApi->getWeather($latitude, $longitude);
 
-        return $this->render('home/index.html.twig', [
+        return $this->render('base.html.twig', [
             'controller_name' => 'HomeController',
             'weather'=> $weatherData,
         ]);
@@ -26,12 +26,10 @@ class HomeController extends AbstractController
 
     public function showWeather(WeatherAPI $weatherApi)
     {
-        $latitude = 42.3478;
-        $longitude = -71.0466;
+        $latitude = 43.42519;
+        $longitude = 6.768337;
 
         $weatherData = $weatherApi-> getWeather($latitude, $longitude);
-        return $this->render('includes/_weatherwidget.html.twig', [
-            'weather' => $weatherData,
-        ]);
+        return $this->render('includes/_weatherwidget.html.twig');
     }
 }
