@@ -9,8 +9,10 @@ use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
 class RegistrationFormType extends AbstractType
@@ -23,18 +25,41 @@ class RegistrationFormType extends AbstractType
                     'Mme' => 'Mme',
                     'Mr' => 'Mr'
                 ],
+                'label' => false,
                 'expanded' => true,
                 'multiple' => false
                 ])
-            ->add('email')
-            ->add('firstname')
-            ->add('lastname')
-            ->add('birthdate')
-            ->add('adress')
-            ->add('city')
-            ->add('postal_code')
+            ->add('email', TextType::class, [
+                'attr' => ['placeholder' => 'E-mail'],
+                'label' => false
+            ])
+            ->add('firstname', TextType::class, [
+                'attr' => ['placeholder' => 'Prénom'],
+                'label' => false
+            ])
+            ->add('lastname', TextType::class, [
+                'attr' => ['placeholder' => 'Prénom'],
+                'label' => false
+            ])
+            ->add('birthdate', DateType::class, [
+                'label' => 'Date de naissance'
+            ])
+
+            ->add('adress', TextType::class, [
+                'attr' => ['placeholder' => 'Adresse'],
+                'label' => false
+            ])
+            ->add('city', TextType::class, [
+                'attr' => ['placeholder' => 'Ville'],
+                'label' => false
+            ])
+            ->add('postal_code', TextType::class, [
+                'attr' => ['placeholder' => 'Code postal'],
+                'label' => false
+            ])
             ->add('agreeTerms', CheckboxType::class, [
-                                'mapped' => false,
+                'mapped' => false,
+                'label' => 'Accepter les conditions',
                 'constraints' => [
                     new IsTrue([
                         'message' => 'You should agree to our terms.',
@@ -42,10 +67,11 @@ class RegistrationFormType extends AbstractType
                 ],
             ])
             ->add('plainPassword', PasswordType::class, [
-                                // instead of being set onto the object directly,
+                // instead of being set onto the object directly,
                 // this is read and encoded in the controller
                 'mapped' => false,
-                'attr' => ['autocomplete' => 'new-password'],
+                'attr' => ['autocomplete' => 'new-password', 'placeholder' => 'Mot de passe'],
+                'label' => false,
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Please enter a password',
