@@ -1,26 +1,52 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}{{ parent() }} - Inscription{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
+    <h1 class='h1-register'>Inscription</h1>
 
     {{ form_errors(registrationForm) }}
 
     {{ form_start(registrationForm) }}
-    {{ form_row(registrationForm.genre) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.firstname) }}
-        {{ form_row(registrationForm.lastname) }}
-        {{ form_row(registrationForm.birthdate) }}
-        {{ form_row(registrationForm.adress) }}
-        {{ form_row(registrationForm.city) }}
-        {{ form_row(registrationForm.postal_code) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+    <div class='register-container'>
+        <div class='input-register'>
+            {{ form_row(registrationForm.genre) }}
+        </div>
+        <div class='name-register'>
+            <div class='input-register input-text'>
+                {{ form_row(registrationForm.firstname) }}
+            </div>
+            <div class='input-register input-text'>
+                {{ form_row(registrationForm.lastname) }}
+            </div>
+        </div>
+        <div class='email-password-register'>
+            <div class='input-register input-text'>
+                {{ form_row(registrationForm.email) }}
+            </div>
+            <div class='input-register input-text'>
+                {{ form_row(registrationForm.plainPassword) }}
+            </div>
+        </div>
+        <div class='input-register input-text adresse-input'>
+            {{ form_row(registrationForm.adress) }}
+        </div>
+        <div class='adress-register'>
+            <div class='input-register input-text'>
+                {{ form_row(registrationForm.city) }}
+            </div>
+            <div class='input-register input-text'>
+                {{ form_row(registrationForm.postal_code) }}
+            </div>
+        </div>
+        <div class='input-register input-date'>
+            {{ form_row(registrationForm.birthdate) }}
+        </div>
+        <div class='input-register'>
+            {{ form_row(registrationForm.agreeTerms) }}
+        </div>
 
-        <button type="submit" class="btn">Register</button>
+        <button type="submit" class="btn">J'accepte</button>
+    </div>
     {{ form_end(registrationForm) }}
 {% endblock %}

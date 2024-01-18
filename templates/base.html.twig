@@ -2,8 +2,12 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}L'Oreal Paris, produits d'esthétique, parfums, produits de soin{% endblock %}</title>
         <link rel="icon" href="{{ asset('/images/loreal.png') }}">
+
+        <title>
+            {% block title %}L'Oreal Paris, produits d'esthétique, parfums, produits de soin{% endblock %}
+        </title>
+
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
             {{ encore_entry_link_tags('react') }}
@@ -16,11 +20,17 @@
         {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
+
     <body>
         {% include 'includes/_navbar.html.twig' %}
         <main>
-            {% block body %}{% endblock %}
+            {% block body %}
+            {% endblock %}
         </main>
         {% include 'includes/_footer.html.twig' %}
+        
+        {% block javascripts %}
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
     </body>
 </html>
