@@ -34,3 +34,12 @@ nav div h2 {
 .icon-menu-burger img {
     width: 30px;
 }
+
+.logout {
+    color: white;
+    text-decoration: none;
+    font-family: var(--titleF);
+    text-align: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
