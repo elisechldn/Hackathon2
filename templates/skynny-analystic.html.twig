@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="{{ asset('/images/loreal.png') }}">
+
+        <title>
+            {% block title %}L'Oreal Paris, produits d'esthétique, parfums, produits de soin{% endblock %}
+        </title>
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="../assets/app.css">
+        {% endblock %}
+    </head>
+
+    <body class='care-body'>
+        <main>
+            {% block body %}
+            <a href="#" class='bouton-care'><button>Étape suivante</button></a>
+            {% endblock %}
+        </main>
+        {% block javascripts %}
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </body>
+</html>
