@@ -9,25 +9,18 @@
         </title>
 
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-            {{ encore_entry_link_tags('react') }}
             <link rel="stylesheet" href="../assets/app.css">
-        {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-            {{ encore_entry_script_tags('react') }}
-        {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
 
-    <body>
-        {% include 'includes/_navbar.html.twig' %}
+    <body class='care-body'>
         <main>
             {% block body %}
-                {% include 'includes/_weatherwidget.html.twig' %}
+            <a href="#" class='bouton-care'><button>Étape suivante</button></a>
             {% endblock %}
         </main>
-        {% include 'includes/_footer.html.twig' %}
+        {% block javascripts %}
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
     </body>
 </html>
