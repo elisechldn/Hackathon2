@@ -24,7 +24,7 @@
     <input type="hidden" name="_csrf_token"
            value="{{ csrf_token('authenticate') }}"
     >
-    <button><a href="{{ path('app_register') }}" class='redirect-login'>Créer un compte</a></button>
+    <a href="{{ path('app_register') }}" class='redirect-login '>Créer un compte</a>
     <button class="bouton-login" type="submit">Se connecter</button>
 </form>
 {% endblock %}
