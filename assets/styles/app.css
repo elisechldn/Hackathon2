@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('root.css');
+@import url('login.css');
+@import url('navbar.css');
+@import url('footer.css');
+@import url('register.css');
+@import url('cardsHome.css');
+@import url('skin.css');
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: skyblue;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
 }
