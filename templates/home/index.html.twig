@@ -5,10 +5,10 @@
 {% endblock %}
 
 {% block body %}
-	<h1>Bienvenue 
+	<h1>Bienvenue
 		{% if app.user %}
 			{{ app.user.name}}
 		{% endif %}
 	</h1>
-	<div id="root"></div>
+		<div class="cards" id="root"></div>
 {% endblock %}

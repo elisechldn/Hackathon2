@@ -1,0 +1,29 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    margin: 2vh auto;
+    height: 100%;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    gap: 5vh;
+}
+
+.card {
+    background-color: grey;
+    border-radius: 0.5rem;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+/* No need for odd/even styling for a single column layout */
+
+/* Media query for responsive design */
+@media (min-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr 1fr; /* Revert to two columns on larger screens */
+    }
+}
