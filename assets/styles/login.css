@@ -1,0 +1,35 @@
+.h1-login {
+    font-family: var(--titleF);
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 3rem 0 1.5rem 0;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input.login-input {
+    margin: 2rem 1rem;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: solid 2px black;
+    width: 70%;
+    font-family: var(--titleF);
+    font-size: 1rem;
+}
+
+input.login-input::placeholder {
+    font-family: var(--titleF);
+    font-size: 1rem;
+}
+
+.redirect-login {
+    background-color: black;
+    color: white;
+    font-family: var(--titleF);
+    padding: 0.2rem;
+}
