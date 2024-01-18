@@ -39,7 +39,5 @@ nav div h2 {
     color: white;
     text-decoration: none;
     font-family: var(--titleF);
-    text-align: center;
-    font-size: 0.8rem;
-    cursor: pointer;
+    font-size: 0.7rem;
 }
