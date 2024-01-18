@@ -1,7 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ parent() }}{% endblock %}
+{% block title %}
+	{{ parent() }}
+{% endblock %}
 
 {% block body %}
-
+	<h1>Bienvenue 
+		{% if app.user %}
+			{{ app.user.name}}
+		{% endif %}
+	</h1>
+	<div id="root"></div>
 {% endblock %}
