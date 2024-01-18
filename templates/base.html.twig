@@ -5,10 +5,14 @@
         <title>{% block title %}L'Oreal Paris, produits d'esthétique, parfums, produits de soin{% endblock %}</title>
         <link rel="icon" href="{{ asset('/images/loreal.png') }}">
         {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+            {{ encore_entry_link_tags('react') }}
             <link rel="stylesheet" href="../assets/app.css">
         {% endblock %}
 
         {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            {{ encore_entry_script_tags('react') }}
         {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
