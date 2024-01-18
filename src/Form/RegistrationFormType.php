@@ -38,7 +38,7 @@ class RegistrationFormType extends AbstractType
                 'label' => false
             ])
             ->add('lastname', TextType::class, [
-                'attr' => ['placeholder' => 'Prénom'],
+                'attr' => ['placeholder' => 'Nom'],
                 'label' => false
             ])
             ->add('birthdate', DateType::class, [
