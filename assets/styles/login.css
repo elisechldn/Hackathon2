@@ -20,11 +20,24 @@ input.login-input {
     width: 70%;
     font-family: var(--titleF);
     font-size: 1rem;
+    outline: 0;
 }
 
 input.login-input::placeholder {
     font-family: var(--titleF);
     font-size: 1rem;
+}
+
+input.login-input:active {
+    background-color: rgba(250, 250, 250, 0) !important;
+}
+
+input.login-input:focus {
+    background-color: rgba(250, 250, 250, 0) !important;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
 .redirect-login {
@@ -48,6 +61,3 @@ input.login-input::placeholder {
     font-size: 1rem;
 }
 
-input.login-input:active {
-    border: none;
-}
