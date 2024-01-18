@@ -4,11 +4,14 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
+    openai_api_key: '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'
+    openai_api_url: 'https://api.openai.com/v1/chat/completions'
 
 services:
     App\Service\ChatGPT:
         arguments:
-            $apiKey: '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'
+            $apiKey: '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'
+            $url: '%openai_api_url%'
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.

@@ -20,7 +20,13 @@
 	<div class="example-wrapper">
 		<h1>Accueil</h1>
 	</div>
-	<pre>
-        {{ dump(response) }}
+	<pre>       
+		<form action="" method="post">
+        <input type="text" name="message" placeholder="Entrez un message">
+        <input type="submit" name="ok" value="Envoyer">      
+    </form>		
     </pre>
+	{% if responses is defined %}
+	<div>{{ responses }}</div>	
+	{% endif %}
 {% endblock %}

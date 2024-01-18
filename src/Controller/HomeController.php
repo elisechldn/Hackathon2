@@ -2,25 +2,32 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use App\Service\ChatGPT;
 use App\Service\WeatherData;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
     #[Route('/', name: 'app_home')]
 
-    public function index(ChatGPT $chatGPT): Response
+    public function index(ChatGPT $chatGPT, Request $request): Response
     {
-        $userMessage = 'donne moi uniquement le nom de 5 produits de maquillage de la marque L\'Oréal qui conviennent a ce temps';
+        $responses = 'nsm';
+        $message = $request->request->get('message');
+        $okButton = $request->request->get('ok');
+        // $userMessage = 'donne moi uniquement le nom de 5 produits de maquillage de la marque L\'Oréal qui conviennent a ce temps';
         // Appel à l'API GPT L'Oréal pour obtenir des recommandations
-        $response = $chatGPT->chat($userMessage);
-        
+        if(!empty($okButton)){
+        $response = $chatGPT->chat($message);
+        $responses = $response->choices[0]->message->content; 
+        dump($responses);
+        }
         // Retournez les recommandations de l'API L'Oréal
-        return $this->render('Home/index.php', [
-            'response' => $response
+        return $this->render('Home/index.html.twig', [
+            'responses' => $responses,            
         ]);
     }
 
