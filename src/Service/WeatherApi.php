@@ -2,7 +2,6 @@
 
 namespace App\Service;
 
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class WeatherApi
@@ -16,5 +15,13 @@ class WeatherApi
             'https://api.tomorrow.io/v4/weather/forecast?location=42.3478,-71.0466&apikey=siQzSnOjLXySbo0W28znF17vdZ5lQyGe',
         );
         return $response->getContent();
+    }
+
+    public function fahrenheitToCelcius(int $celcius):int
+    {
+        $fahrenheit = 0;
+        $celcius = ($fahrenheit - 32)/1.8;
+
+        return $celcius;
     }
 }
