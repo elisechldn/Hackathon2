@@ -18,7 +18,7 @@ class HomeController extends AbstractController
 
         $weatherData = $weatherApi->getWeather($latitude, $longitude);
 */
-        return $this->render('base.html.twig', [
+        return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             /*'weather'=> $weatherData,*/
         ]);
