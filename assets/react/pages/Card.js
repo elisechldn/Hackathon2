@@ -4,8 +4,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-<<<<<<< HEAD
-=======
 import '../../styles/app.css';
 
 const produits = [
@@ -16,7 +14,6 @@ const produits = [
   { nom: "Shampooing masque Absolut Repair Série Expert", prix: 20, description: "Un shampooing masque pour des cheveux en bonne santé.", photo: "https://www.nocibe.fr/fstrz/r/s/www.nocibe.fr/medias/produits/266404/266404-l-oreal-professionnel-absolut-repair-masque-restructurant-dore-pour-cheveux-abimes-250ml-pot-1000x1000.jpg?frz-v=5569", ingredient: "Acide hyaluronique, Pro-Xylane, LHA, Adénosine, Fibrelastyl." },
   { nom: "Ombre à paupières", prix: 25, description: "Une ombre à paupières pour un regard de biche.", photo: "https://www.la-parfumerie-discount.fr/698-medium_default/ombre-a-paupieres-color-riche-les-ombres-l-oreal.jpg", ingredient: "Acide hyaluronique, Pro-Xylane, Adénosine, Fibrelastyl" },
 ];
->>>>>>> 24185859714841a28d1f4a7447d713a7397c165b
 
 export default function GradientCover() {
   return (
