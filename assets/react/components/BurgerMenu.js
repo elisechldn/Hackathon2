@@ -20,7 +20,7 @@ const BurgerMenu = () => {
         <div className='container-burger' style={{ padding: 20}}>
         <ul>
             <li><a href="/skin">Skin Analyse</a></li>
-            <li><a href="">Daily Routine</a></li>
+            <li><a href="/daily-routine">Daily Routine</a></li>
             <li><a href="/points">Compte Fidélité</a></li>
           </ul>
         </div>
