@@ -4,8 +4,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    margin: 8vh auto; 
-    gap: 5vh;  
+    margin: 4vh auto; 
+    gap: 1vh;  
 }
 
 .qrcode_img {
