@@ -65,3 +65,7 @@ li {
     margin-top: 10px;
     color: #777;
 }
+
+.link-produit {
+    text-decoration: none;
+}

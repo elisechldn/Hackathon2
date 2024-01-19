@@ -6,9 +6,11 @@
             <h1 class="titre-produit">
         {{ produit.nom }}
     </h1>
+    <a class="link-produit" href="{{produit.lien}}">>
     <img class="img-produit" src="{{produit.photo}}" alt="{{produit.nom}}">
     <h3 class="description-produit">{{produit.description}}</h3>
-    <p class="prix-produit">{{produit.prix}}€</p>
+    </a>
+    <p class="prix-produit">{{produit.prix}}</p>
     <h2 class="titre-produit">Liste des ingredients :</h2>
     <ul class="ingredients">
     {% for ingredient in produit.ingredients %}
