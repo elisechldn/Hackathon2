@@ -21,6 +21,7 @@ const BurgerMenu = () => {
         <ul>
             <li><a href="/skin">Skin Analyse</a></li>
             <li><a href="/daily-routine">Daily Routine</a></li>
+            <li><a href="/profil">Mon profil</a></li>
             <li><a href="/points">Compte Fidélité</a></li>
           </ul>
         </div>
