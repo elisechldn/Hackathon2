@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>Mes produits</h1>
+    <div class='ligne-titre'></div>
+
+<div class='Mes-produits'>
+    <div class='liste-produits'>
+        <h3>
+            <li>Crème revitalift</li>
+            <li>Fond de teint fluide</li>
+            <li>Shampoing réparateur</li>
+        </h3>
+    </div>
+    <div class='img-produits'>
+        <li></li>
+        <li></li>
+        <li></li>
+    </div>
+</div>
+
+<h1>Mes allergies</h1>
+    <div class='ligne-titre'></div>
+
+<div class='composition'>
+    <div class='ingrédients'>
+        <h3>
+            <li>Formaldéhyde</li>
+            {# <li>Pro-Xylane</li>
+            <li>LHA</li> #}
+        </h3>
+    </div>
+        <div class='checkbox-profil'>
+            <ul>
+                <li><input type="checkbox"></li>
+                {# <li><input type="checkbox"></li>
+                <li><input type="checkbox"></li> #}
+            </ul>
+    </div>  
+</div>
+
+<h1>Localisation</h1>
+    <div class='ligne-titre'></div>
+<div class='localisation'>
+    <h4>122 Rue du Palais</h4>
+    <h4>75 000 Paris</h4>
+</div>
+{% endblock %}
