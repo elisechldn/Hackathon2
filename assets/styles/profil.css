@@ -1,0 +1,50 @@
+.Mes-produits {
+    display: flex;
+    margin-bottom: 2rem;
+    margin-left: 40%;
+}
+
+.liste-produits {
+    display: block;
+}
+
+.liste-produits li {
+}
+
+.img-produits {
+    display: block;
+    margin-left: 3rem;
+}
+
+.Mes-allergènes {
+    display: flex;
+    margin: auto;
+    width: 100%;
+}
+
+.liste-allergènes {
+    display: block;
+}
+
+.checkbox-profil {
+    display: block;
+    margin-left: 3rem;
+}
+
+.Mes-allergènes li {
+    margin-left: 40%;
+}
+
+.Mes-allergènes h3 {
+    margin-bottom: 1rem;
+    margin-left: 40%;
+    width: 100%;
+}
+
+.localisation {
+    margin-bottom: 3rem;
+}
+
+.localisation h4 {
+    margin-left: 40%;
+}
