@@ -1,0 +1,13 @@
+.qrcode {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin: 4vh auto; 
+    gap: 1vh;  
+}
+
+.qrcode_img {
+    width: 100%;    
+}
