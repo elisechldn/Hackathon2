@@ -26,3 +26,42 @@ li {
     margin-bottom: 1rem;
     margin-left: 40%;
 }
+
+.titre-produit {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+.img-produit {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%; /* Réduire la largeur de l'image */
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.description-produit {
+    text-align: center;
+    color: #555;
+    margin: 20px;
+}
+
+.prix-produit {
+    text-align: center;
+    font-size: 24px; /* Augmenter la taille du prix */
+    font-weight: bold; /* Rendre le prix plus apparent */
+    color: #e44d26; /* Une nuance de rouge - vous pouvez ajuster la couleur selon vos préférences */
+    margin-bottom: 20px;
+}
+
+.ingredients {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.liste-d-ingredients {
+    margin-top: 10px;
+    color: #777;
+}
