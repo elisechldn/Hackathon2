@@ -19,7 +19,7 @@ class WeatherApi
         //appartient à HttpClientInterface et pas à WeatherApi
         $response = $this->client->request(
             'GET',
-            'https://api.tomorrow.io/v4/weather/forecast?location=' . $latitude . ',' . $longitude . '&apikey=ghzvzNTHjSxpSAFxkDZcKvcTbaQJxRwT'
+            'https://api.tomorrow.io/v4/weather/forecast?location=' . $latitude . ',' . $longitude . '&apikey=RgiqUEe8YnffbcdgQLrB6zd7u3ZdqMD4'
         );
         $weatherData= $response->toArray()['timelines']['daily'][0]['values']['temperatureAvg'];
 
