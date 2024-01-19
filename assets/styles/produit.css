@@ -36,7 +36,7 @@ li {
 .img-produit {
     display: block;
     margin: 20px auto;
-    max-width: 80%; /* Réduire la largeur de l'image */
+    max-width: 80%;
     height: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -49,9 +49,9 @@ li {
 
 .prix-produit {
     text-align: center;
-    font-size: 24px; /* Augmenter la taille du prix */
-    font-weight: bold; /* Rendre le prix plus apparent */
-    color: #e44d26; /* Une nuance de rouge - vous pouvez ajuster la couleur selon vos préférences */
+    font-size: 24px;
+    font-weight: bold;
+    color: #078322;
     margin-bottom: 20px;
 }
 

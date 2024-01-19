@@ -1,7 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1 class="titre-produit">
+    <h1 class="titre-produit">Votre Daily Routine</h1>
+    {% for produit in produits %}
+            <h1 class="titre-produit">
         {{ produit.nom }}
     </h1>
     <img class="img-produit" src="{{produit.photo}}" alt="{{produit.nom}}">
@@ -13,9 +15,5 @@
         <li class="liste-d'ingredients">{{ingredient}}</li>
     {% endfor %}
     </ul>
-    
-    <h3 class="description-produit">
-        Ou trouver ce produit pret de chez vous ?
-    </h3>
-    <img src="https://www.permis-apoints.com/map-saint-raphael-avenue-touring-club-e834fc438ccb22964f594ec71fb55dc2.png" alt="sephora">
+    {% endfor %}
 {% endblock %}
