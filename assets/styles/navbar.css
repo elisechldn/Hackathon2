@@ -7,7 +7,6 @@ nav div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0.5rem;
 }
 
 .title-navbar {
@@ -17,7 +16,7 @@ nav div {
     justify-content: center;
 }
 
-nav div h1 {
+nav div h3 {
     color: white;
     font-family: var(--titleF);
     text-align: center;
@@ -31,6 +30,32 @@ nav div h2 {
     font-size: 0.8rem;
 }
 
-.icon-menu-burger img {
-    width: 30px;
+.height-drawer {
+    height: fit-content !important;
+    background-color: black !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.height-drawer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.height-drawer li {
+    margin-bottom: 1rem;
+}
+
+.height-drawer li a {
+    font-family: var(--titleF);
+    text-decoration: none;
+    color: white;
+}
+
+.logout {
+    color: white;
+    text-decoration: none;
+    font-family: var(--titleF);
+    font-size: 0.7rem;
 }
