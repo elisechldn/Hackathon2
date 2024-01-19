@@ -38,6 +38,11 @@ class HomeController extends AbstractController
     #[Route('/points', name: 'app_points')]
     public function fidelisation()
     {
-        return $this->render('fidelisation/qrcode.html.twig');
-    }
+        if($this->getUser()) {
+            return $this->render('fidelisation/qrcode.html.twig');
+        } else {
+            return $this->redirectToRoute('app_login');
+        }
+        
+    } 
 }
