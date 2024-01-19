@@ -21,7 +21,7 @@ const BurgerMenu = () => {
         <ul>
             <li><a href="/skin">Skin Analyse</a></li>
             <li><a href="">Daily Routine</a></li>
-            <li><a href="/app_points">Compte Fidélité</a></li>
+            <li><a href="/points">Compte Fidélité</a></li>
           </ul>
         </div>
       </Drawer>
