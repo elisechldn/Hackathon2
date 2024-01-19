@@ -18,7 +18,7 @@ class HomeController extends AbstractController
 
         $weatherData = $weatherApi->getWeather($latitude, $longitude);
 
-        return $this->render('base.html.twig', [
+        return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'weather'=> $weatherData,
         ]);
@@ -32,4 +32,17 @@ class HomeController extends AbstractController
         $weatherData = $weatherApi-> getWeather($latitude, $longitude);
         return $this->render('includes/_weatherwidget.html.twig');
     }
+
+    // fidelisation
+    
+    #[Route('/points', name: 'app_points')]
+    public function fidelisation()
+    {
+        if($this->getUser()) {
+            return $this->render('fidelisation/qrcode.html.twig');
+        } else {
+            return $this->redirectToRoute('app_login');
+        }
+        
+    } 
 }

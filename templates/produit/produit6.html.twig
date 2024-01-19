@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class="titre-produit">
+        {{ produit.nom }}
+    </h1>
+    <img class="img-produit" src="{{produit.photo}}" alt="{{produit.nom}}">
+    <h3 class="description-produit">{{produit.description}}</h3>
+    <p class="prix-produit">{{produit.prix}}€</p>
+    <h2 class="titre-produit">Liste des ingredients :</h2>
+    <ul class="ingredients">
+    {% for ingredient in produit.ingredients %}
+        <li class="liste-d'ingredients">{{ingredient}}</li>
+    {% endfor %}
+    </ul>
+    
+    <h3 class="description-produit">
+        Ou trouver ce produit pret de chez vous ?
+    </h3>
+    <img src="https://www.permis-apoints.com/map-saint-raphael-avenue-touring-club-e834fc438ccb22964f594ec71fb55dc2.png" alt="sephora">
+{% endblock %}

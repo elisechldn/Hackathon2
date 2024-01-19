@@ -8,6 +8,7 @@
 @import url('cardsHome.css');
 @import url('skin.css');
 @import url('profil.css');
+@import url('qrcode.css');
 
 *, ::before, ::after {
     margin: 0;
