@@ -4,6 +4,7 @@
 @import url('navbar.css');
 @import url('footer.css');
 @import url('register.css');
+@import url('produit.css');
 @import url('cardsHome.css');
 @import url('skin.css');
 
@@ -16,4 +17,17 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
+}
+
+h1 {
+    font-family: var(--titleF);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.ligne-titre {
+    border-top: 3px solid black;
+    width: 20%;
+    margin: auto;
+    margin-bottom: 3rem;
 }
