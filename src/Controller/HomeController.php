@@ -32,4 +32,10 @@ class HomeController extends AbstractController
         $weatherData = $weatherApi-> getWeather($latitude, $longitude);
         return $this->render('includes/_weatherwidget.html.twig');
     }
+
+    #[Route('/points', name: 'app_points')]
+    public function qrcode()
+    {
+        return $this->render('fidelisation/qrcode.html.twig');
+    }
 }

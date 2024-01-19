@@ -21,7 +21,7 @@ class WeatherApi
             'GET',
             'https://api.tomorrow.io/v4/weather/forecast?location=' . $latitude . ',' . $longitude . '&apikey=siQzSnOjLXySbo0W28znF17vdZ5lQyGe'
         );
-        $weatherData= $response->toArray()['timelines']['daily'][0]['values']['temperatureAvg']['uvIndex'];
+        $weatherData= $response->toArray()['timelines']['daily'][0]['values']['temperatureAvg'];
 
         return $weatherData;
     }
