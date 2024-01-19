@@ -33,6 +33,8 @@ class HomeController extends AbstractController
         return $this->render('includes/_weatherwidget.html.twig');
     }
 
+    // fidelisation
+    
     #[Route('/points', name: 'app_points')]
     public function fidelisation()
     {
