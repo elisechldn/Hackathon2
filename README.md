@@ -15,4 +15,4 @@ L'idée de ce projet est de mettre en avant le travail des équipes Beauty Tech 
 
 <h2>STACKS UTILISÉES :</h2>
 
-HTML5 - CSS3 - Symfony - React - MySQL Doctrine - JavaScript
+HTML5 - CSS3 - Symfony - React - MySQL Doctrine - JavaScript -API
